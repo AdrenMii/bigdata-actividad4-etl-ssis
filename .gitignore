@@ -1,0 +1,14 @@
+# Visual Studio / SSIS
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.database
+# Office temporales
+~$*
+# Nada de secretos
+.env
+.env.*
+*.pem
+*.key
