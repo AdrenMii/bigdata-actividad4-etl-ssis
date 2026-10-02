@@ -6,19 +6,19 @@
   DTS:CreatorComputerName="KER"
   DTS:CreatorName="KER\henry"
   DTS:Description="Carga el Excel de personas al modelo relacional PersonasMER con limpieza, validacion, rechazos y duplicados"
-  DTS:DTSID="{F8C958CA-3B0D-4968-B918-BBEC9E07FB38}"
+  DTS:DTSID="{2852B1A5-403A-4080-9A1B-36E2B20D3C90}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.1000.6"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="PaqueteA_ExcelARelacional"
-  DTS:VersionGUID="{16CD0AD8-CAA5-4281-8A3B-CFBA8B3AFA83}">
+  DTS:VersionGUID="{AB1404D1-EB0A-4A03-BC40-D9F6F508C5B7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel PersonasETLActividad4]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{716A05FB-AE35-4A9B-BF6F-08A0C34F8D81}"
+      DTS:DTSID="{3EC2E19E-BB1A-4743-8154-F13C3BFE39E2}"
       DTS:ObjectName="Excel PersonasETLActividad4">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -30,7 +30,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[PersonasMER]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{CC931E52-E967-4424-9F80-F8044835E42D}"
+      DTS:DTSID="{1848EE9D-2A2B-4ABF-AB05-4B9EE0A2402D}"
       DTS:ObjectName="PersonasMER">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -43,7 +43,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{FE457D51-B975-4D8E-A9B5-92BEB6F36909}"
+      DTS:DTSID="{BE904372-EB7A-4F03-A4E4-C765078ED33F}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="RcCargados">
@@ -52,7 +52,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{24CAA9BC-4BC6-4FF5-9A41-0A4EC95F9815}"
+      DTS:DTSID="{1E0C9BEA-3AB4-4BF6-B611-1D048404D5EF}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="RcLeidos">
@@ -61,7 +61,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{CA92A14C-0818-43F7-B1AB-65FB74854A72}"
+      DTS:DTSID="{951C24E1-19C4-42DD-B2A4-3F13E4E23A36}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="RcRechazados">
@@ -70,7 +70,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{858F3228-58B9-4AA5-89F4-856D3A1C7EB7}"
+      DTS:DTSID="{7D107D78-F985-4CE3-AC7D-59370A40FDFC}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="RcRevision">
@@ -79,7 +79,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{D2820C41-CFBC-47A4-A1A9-B71026154606}"
+      DTS:DTSID="{6841B60F-B86F-4615-B7D2-F9A0303C8836}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="RcValidos">
@@ -92,7 +92,7 @@
       DTS:refId="Package\DFT 1 Limpiar y validar Excel"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Lee el Excel, normaliza, valida, separa rechazos/revision y resuelve duplicados"
-      DTS:DTSID="{12B66B17-4B6B-4A35-BB82-2BC5182A262F}"
+      DTS:DTSID="{8DC4D3C4-2510-4486-B333-3B76662A869C}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT 1 Limpiar y validar Excel"
@@ -9612,17 +9612,17 @@
               name="Aggregate Output 1"
               startId="Package\DFT 1 Limpiar y validar Excel\AGG Ultima version.Outputs[Aggregate Output 1]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Con cambio4]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Con cambio]"
               endId="Package\DFT 1 Limpiar y validar Excel\DER Log tipo documento.Inputs[Derived Column Input]"
               name="Con cambio"
               startId="Package\DFT 1 Limpiar y validar Excel\CSPL Log tipo documento.Outputs[Con cambio]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Con cambio5]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Con cambio1]"
               endId="Package\DFT 1 Limpiar y validar Excel\DER Log municipio.Inputs[Derived Column Input]"
               name="Con cambio"
               startId="Package\DFT 1 Limpiar y validar Excel\CSPL Log municipio.Outputs[Con cambio]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Con cambio]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Con cambio2]"
               endId="Package\DFT 1 Limpiar y validar Excel\DER Log ingreso.Inputs[Derived Column Input]"
               name="Con cambio"
               startId="Package\DFT 1 Limpiar y validar Excel\CSPL Log ingreso.Outputs[Con cambio]" />
@@ -9632,65 +9632,65 @@
               name="Con cambio"
               startId="Package\DFT 1 Limpiar y validar Excel\CSPL Log departamento.Outputs[Con cambio]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Con cambio2]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Con cambio4]"
               endId="Package\DFT 1 Limpiar y validar Excel\DER Log fecha nacimiento.Inputs[Derived Column Input]"
               name="Con cambio"
               startId="Package\DFT 1 Limpiar y validar Excel\CSPL Log fecha nacimiento.Outputs[Con cambio]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Con cambio1]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Con cambio5]"
               endId="Package\DFT 1 Limpiar y validar Excel\DER Log gasto.Inputs[Derived Column Input]"
               name="Con cambio"
               startId="Package\DFT 1 Limpiar y validar Excel\CSPL Log gasto.Outputs[Con cambio]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output4]"
-              endId="Package\DFT 1 Limpiar y validar Excel\DST Log ingreso.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DFT 1 Limpiar y validar Excel\DER Log ingreso.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output5]"
-              endId="Package\DFT 1 Limpiar y validar Excel\DST Log gasto.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DFT 1 Limpiar y validar Excel\DER Log gasto.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output7]"
-              endId="Package\DFT 1 Limpiar y validar Excel\DST Log departamento.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DFT 1 Limpiar y validar Excel\DER Log departamento.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output6]"
-              endId="Package\DFT 1 Limpiar y validar Excel\DST Log fecha nacimiento.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DFT 1 Limpiar y validar Excel\DER Log fecha nacimiento.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output2]"
-              endId="Package\DFT 1 Limpiar y validar Excel\RC Rechazados.Inputs[Row Count Input 1]"
-              name="Derived Column Output"
-              startId="Package\DFT 1 Limpiar y validar Excel\DER Motivo rechazo.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output1]"
-              endId="Package\DFT 1 Limpiar y validar Excel\CSPL Clasificar registros.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DFT 1 Limpiar y validar Excel\DER Validar reglas.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output]"
-              endId="Package\DFT 1 Limpiar y validar Excel\LKP Municipio de referencia.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\DFT 1 Limpiar y validar Excel\DER Normalizar y convertir.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output3]"
-              endId="Package\DFT 1 Limpiar y validar Excel\RC Revision.Inputs[Row Count Input 1]"
-              name="Derived Column Output"
-              startId="Package\DFT 1 Limpiar y validar Excel\DER Motivo revision.Outputs[Derived Column Output]" />
-            <path
               refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output9]"
+              endId="Package\DFT 1 Limpiar y validar Excel\DST Log tipo documento.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT 1 Limpiar y validar Excel\DER Log tipo documento.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output8]"
               endId="Package\DFT 1 Limpiar y validar Excel\DST Log municipio.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DFT 1 Limpiar y validar Excel\DER Log municipio.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output8]"
-              endId="Package\DFT 1 Limpiar y validar Excel\DST Log tipo documento.Inputs[OLE DB Destination Input]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output7]"
+              endId="Package\DFT 1 Limpiar y validar Excel\RC Revision.Inputs[Row Count Input 1]"
               name="Derived Column Output"
-              startId="Package\DFT 1 Limpiar y validar Excel\DER Log tipo documento.Outputs[Derived Column Output]" />
+              startId="Package\DFT 1 Limpiar y validar Excel\DER Motivo revision.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output6]"
+              endId="Package\DFT 1 Limpiar y validar Excel\LKP Municipio de referencia.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\DFT 1 Limpiar y validar Excel\DER Normalizar y convertir.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output5]"
+              endId="Package\DFT 1 Limpiar y validar Excel\CSPL Clasificar registros.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DFT 1 Limpiar y validar Excel\DER Validar reglas.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output2]"
+              endId="Package\DFT 1 Limpiar y validar Excel\DST Log departamento.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT 1 Limpiar y validar Excel\DER Log departamento.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output3]"
+              endId="Package\DFT 1 Limpiar y validar Excel\DST Log fecha nacimiento.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT 1 Limpiar y validar Excel\DER Log fecha nacimiento.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output1]"
+              endId="Package\DFT 1 Limpiar y validar Excel\DST Log gasto.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT 1 Limpiar y validar Excel\DER Log gasto.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output]"
+              endId="Package\DFT 1 Limpiar y validar Excel\DST Log ingreso.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT 1 Limpiar y validar Excel\DER Log ingreso.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Derived Column Output4]"
+              endId="Package\DFT 1 Limpiar y validar Excel\RC Rechazados.Inputs[Row Count Input 1]"
+              name="Derived Column Output"
+              startId="Package\DFT 1 Limpiar y validar Excel\DER Motivo rechazo.Outputs[Derived Column Output]" />
             <path
               refId="Package\DFT 1 Limpiar y validar Excel.Paths[Excel Source Output]"
               endId="Package\DFT 1 Limpiar y validar Excel\RC Leidos.Inputs[Row Count Input 1]"
@@ -9762,27 +9762,27 @@
               name="Row Count Output 1"
               startId="Package\DFT 1 Limpiar y validar Excel\RC Leidos.Outputs[Row Count Output 1]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Row Count Output 14]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Row Count Output 11]"
               endId="Package\DFT 1 Limpiar y validar Excel\DST Staging limpia.Inputs[OLE DB Destination Input]"
               name="Row Count Output 1"
               startId="Package\DFT 1 Limpiar y validar Excel\RC Cargados.Outputs[Row Count Output 1]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Row Count Output 13]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Row Count Output 12]"
               endId="Package\DFT 1 Limpiar y validar Excel\MC Validos.Inputs[Multicast Input 1]"
               name="Row Count Output 1"
               startId="Package\DFT 1 Limpiar y validar Excel\RC Validos.Outputs[Row Count Output 1]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Row Count Output 12]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Row Count Output 13]"
               endId="Package\DFT 1 Limpiar y validar Excel\DST Revision.Inputs[OLE DB Destination Input]"
               name="Row Count Output 1"
               startId="Package\DFT 1 Limpiar y validar Excel\RC Revision.Outputs[Row Count Output 1]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Row Count Output 11]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Row Count Output 14]"
               endId="Package\DFT 1 Limpiar y validar Excel\DST Rechazos.Inputs[OLE DB Destination Input]"
               name="Row Count Output 1"
               startId="Package\DFT 1 Limpiar y validar Excel\RC Rechazados.Outputs[Row Count Output 1]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Sort Output2]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Sort Output]"
               endId="Package\DFT 1 Limpiar y validar Excel\RC Cargados.Inputs[Row Count Input 1]"
               name="Sort Output"
               startId="Package\DFT 1 Limpiar y validar Excel\SRT Quitar copias identicas.Outputs[Sort Output]" />
@@ -9792,7 +9792,7 @@
               name="Sort Output"
               startId="Package\DFT 1 Limpiar y validar Excel\SRT Ultima version.Outputs[Sort Output]" />
             <path
-              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Sort Output]"
+              refId="Package\DFT 1 Limpiar y validar Excel.Paths[Sort Output2]"
               endId="Package\DFT 1 Limpiar y validar Excel\MJ Conservar ultima version.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\DFT 1 Limpiar y validar Excel\SRT Por persona, fecha y version.Outputs[Sort Output]" />
@@ -9809,7 +9809,7 @@
       DTS:refId="Package\DFT 2 Cargar catalogos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Niveles educativos, situaciones laborales y ocupaciones (solo los nuevos)"
-      DTS:DTSID="{A80CB795-2E37-4B3F-992E-6E88038BBE76}"
+      DTS:DTSID="{B80B9E97-179B-4AD4-A85B-4ADB56B90B95}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT 2 Cargar catalogos"
@@ -11233,12 +11233,12 @@
               name="Aggregate Output 1"
               startId="Package\DFT 2 Cargar catalogos\AGG Niveles.Outputs[Aggregate Output 1]" />
             <path
-              refId="Package\DFT 2 Cargar catalogos.Paths[Aggregate Output 12]"
+              refId="Package\DFT 2 Cargar catalogos.Paths[Aggregate Output 11]"
               endId="Package\DFT 2 Cargar catalogos\CSPL Con ocupacion.Inputs[Conditional Split Input]"
               name="Aggregate Output 1"
               startId="Package\DFT 2 Cargar catalogos\AGG Ocupaciones.Outputs[Aggregate Output 1]" />
             <path
-              refId="Package\DFT 2 Cargar catalogos.Paths[Aggregate Output 11]"
+              refId="Package\DFT 2 Cargar catalogos.Paths[Aggregate Output 12]"
               endId="Package\DFT 2 Cargar catalogos\LKP Situacion existente.Inputs[Lookup Input]"
               name="Aggregate Output 1"
               startId="Package\DFT 2 Cargar catalogos\AGG Situaciones.Outputs[Aggregate Output 1]" />
@@ -11248,17 +11248,17 @@
               name="Con ocupacion"
               startId="Package\DFT 2 Cargar catalogos\CSPL Con ocupacion.Outputs[Con ocupacion]" />
             <path
-              refId="Package\DFT 2 Cargar catalogos.Paths[Lookup No Match Output1]"
+              refId="Package\DFT 2 Cargar catalogos.Paths[Lookup No Match Output]"
               endId="Package\DFT 2 Cargar catalogos\DST SituacionesLaborales.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\DFT 2 Cargar catalogos\LKP Situacion existente.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\DFT 2 Cargar catalogos.Paths[Lookup No Match Output2]"
+              refId="Package\DFT 2 Cargar catalogos.Paths[Lookup No Match Output1]"
               endId="Package\DFT 2 Cargar catalogos\DST Ocupaciones.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\DFT 2 Cargar catalogos\LKP Ocupacion existente.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\DFT 2 Cargar catalogos.Paths[Lookup No Match Output]"
+              refId="Package\DFT 2 Cargar catalogos.Paths[Lookup No Match Output2]"
               endId="Package\DFT 2 Cargar catalogos\DST NivelesEducativos.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\DFT 2 Cargar catalogos\LKP Nivel existente.Outputs[Lookup No Match Output]" />
@@ -11290,7 +11290,7 @@
       DTS:refId="Package\DFT 3 Cargar personas"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Una persona por tipo y numero de documento (solo las nuevas)"
-      DTS:DTSID="{103BA038-A829-4B89-890A-F605380D8964}"
+      DTS:DTSID="{23407714-E4A8-4488-884E-A5B668598E55}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT 3 Cargar personas"
@@ -12417,7 +12417,7 @@
       DTS:refId="Package\DFT 4 Cargar observaciones"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Una observacion por persona y fecha de encuesta, con sus llaves foraneas"
-      DTS:DTSID="{D8266248-A401-4954-B3EC-5983282EB293}"
+      DTS:DTSID="{65FF33F9-6E22-4CDB-9824-4CC87358F6F2}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT 4 Cargar observaciones"
@@ -14360,27 +14360,27 @@
           </components>
           <paths>
             <path
-              refId="Package\DFT 4 Cargar observaciones.Paths[Lookup Match Output4]"
+              refId="Package\DFT 4 Cargar observaciones.Paths[Lookup Match Output]"
               endId="Package\DFT 4 Cargar observaciones\LKP Observacion existente.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DFT 4 Cargar observaciones\LKP IdOcupacion.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DFT 4 Cargar observaciones.Paths[Lookup Match Output3]"
+              refId="Package\DFT 4 Cargar observaciones.Paths[Lookup Match Output1]"
               endId="Package\DFT 4 Cargar observaciones\LKP IdOcupacion.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DFT 4 Cargar observaciones\LKP IdSituacionLaboral.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DFT 4 Cargar observaciones.Paths[Lookup Match Output1]"
+              refId="Package\DFT 4 Cargar observaciones.Paths[Lookup Match Output2]"
               endId="Package\DFT 4 Cargar observaciones\LKP IdNivelEducativo.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DFT 4 Cargar observaciones\LKP IdMunicipio.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DFT 4 Cargar observaciones.Paths[Lookup Match Output2]"
+              refId="Package\DFT 4 Cargar observaciones.Paths[Lookup Match Output3]"
               endId="Package\DFT 4 Cargar observaciones\LKP IdSituacionLaboral.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DFT 4 Cargar observaciones\LKP IdNivelEducativo.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DFT 4 Cargar observaciones.Paths[Lookup Match Output]"
+              refId="Package\DFT 4 Cargar observaciones.Paths[Lookup Match Output4]"
               endId="Package\DFT 4 Cargar observaciones\LKP IdMunicipio.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DFT 4 Cargar observaciones\LKP IdPersona.Outputs[Lookup Match Output]" />
@@ -14402,7 +14402,7 @@
       DTS:refId="Package\SQL Preparar staging y tablas de control"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Vacia la staging y los registros de control de la ejecucion anterior (no toca los datos cargados)"
-      DTS:DTSID="{606A8729-8AFB-4549-82F4-36617621074C}"
+      DTS:DTSID="{5FE38558-5FD7-4AAC-8FE5-E62C8C8BFBC3}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL Preparar staging y tablas de control"
@@ -14410,7 +14410,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{CC931E52-E967-4424-9F80-F8044835E42D}"
+          SQLTask:Connection="{1848EE9D-2A2B-4ABF-AB05-4B9EE0A2402D}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.StgPersonas;&#xA;DELETE FROM dbo.Rechazos;&#xA;DELETE FROM dbo.LogCambios;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -14418,7 +14418,7 @@
       DTS:refId="Package\SQL Registrar resumen"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Guarda los conteos de la ejecucion"
-      DTS:DTSID="{1654E9F3-CF8B-49A1-BB61-A39D2BA3D9A9}"
+      DTS:DTSID="{3A9EADA0-9BFB-46F3-AA30-93D3E880D79F}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL Registrar resumen"
@@ -14428,7 +14428,7 @@
         DTS:Name="SqlStatementSource">"INSERT INTO dbo.ResumenCargas (Leidos, Rechazados, EnRevision, Validos, DuplicadosDescartados, Cargados) VALUES (" + (DT_WSTR,10)@[User::RcLeidos] + "," + (DT_WSTR,10)@[User::RcRechazados] + "," + (DT_WSTR,10)@[User::RcRevision] + "," + (DT_WSTR,10)@[User::RcValidos] + "," + (DT_WSTR,10)(@[User::RcValidos] - @[User::RcCargados]) + "," + (DT_WSTR,10)@[User::RcCargados] + ")"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{CC931E52-E967-4424-9F80-F8044835E42D}"
+          SQLTask:Connection="{1848EE9D-2A2B-4ABF-AB05-4B9EE0A2402D}"
           SQLTask:SqlStatementSource="INSERT INTO dbo.ResumenCargas (Leidos, Rechazados, EnRevision, Validos, DuplicadosDescartados, Cargados) VALUES (0,0,0,0,0,0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -14437,42 +14437,42 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[{5B72D7BD-4C24-408E-97C0-09287F9DA391\}]"
       DTS:CreationName=""
-      DTS:DTSID="{5B72D7BD-4C24-408E-97C0-09287F9DA391}"
+      DTS:DTSID="{FA71FEE3-A3BD-49E8-91FA-DF1B4057917E}"
       DTS:From="Package\DFT 4 Cargar observaciones"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{5B72D7BD-4C24-408E-97C0-09287F9DA391}"
+      DTS:ObjectName="{FA71FEE3-A3BD-49E8-91FA-DF1B4057917E}"
       DTS:To="Package\SQL Registrar resumen" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[{7846CA02-F929-4F56-AD02-BAEA6BAE4322\}]"
       DTS:CreationName=""
-      DTS:DTSID="{7846CA02-F929-4F56-AD02-BAEA6BAE4322}"
+      DTS:DTSID="{6401D363-879B-42A0-A66E-AF0E54D76924}"
       DTS:From="Package\DFT 2 Cargar catalogos"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{7846CA02-F929-4F56-AD02-BAEA6BAE4322}"
+      DTS:ObjectName="{6401D363-879B-42A0-A66E-AF0E54D76924}"
       DTS:To="Package\DFT 3 Cargar personas" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[{B5189825-11B6-4C04-A9BC-D6F750732EB8\}]"
       DTS:CreationName=""
-      DTS:DTSID="{B5189825-11B6-4C04-A9BC-D6F750732EB8}"
+      DTS:DTSID="{1E5800AB-D8DB-405B-B38B-C23185673F78}"
       DTS:From="Package\DFT 3 Cargar personas"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{B5189825-11B6-4C04-A9BC-D6F750732EB8}"
+      DTS:ObjectName="{1E5800AB-D8DB-405B-B38B-C23185673F78}"
       DTS:To="Package\DFT 4 Cargar observaciones" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[{B7CAD907-ADD7-4743-B70E-D723218D03E1\}]"
       DTS:CreationName=""
-      DTS:DTSID="{B7CAD907-ADD7-4743-B70E-D723218D03E1}"
+      DTS:DTSID="{49AE2B77-5918-48C1-A477-FFE9B1E43F60}"
       DTS:From="Package\DFT 1 Limpiar y validar Excel"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{B7CAD907-ADD7-4743-B70E-D723218D03E1}"
+      DTS:ObjectName="{49AE2B77-5918-48C1-A477-FFE9B1E43F60}"
       DTS:To="Package\DFT 2 Cargar catalogos" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[{D0E36B6F-6686-461D-9F7C-E26E4DCD06C7\}]"
       DTS:CreationName=""
-      DTS:DTSID="{D0E36B6F-6686-461D-9F7C-E26E4DCD06C7}"
+      DTS:DTSID="{049ED802-1118-4A67-B103-6CA3827CFCDF}"
       DTS:From="Package\SQL Preparar staging y tablas de control"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{D0E36B6F-6686-461D-9F7C-E26E4DCD06C7}"
+      DTS:ObjectName="{049ED802-1118-4A67-B103-6CA3827CFCDF}"
       DTS:To="Package\DFT 1 Limpiar y validar Excel" />
   </DTS:PrecedenceConstraints>
 </DTS:Executable>

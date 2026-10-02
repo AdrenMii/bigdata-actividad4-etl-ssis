@@ -6,19 +6,19 @@
   DTS:CreatorComputerName="KER"
   DTS:CreatorName="KER\henry"
   DTS:Description="Carga el data warehouse PersonasDW (esquema estrella) solo con la informacion depurada de PersonasMER"
-  DTS:DTSID="{B96DDA3D-EA58-4271-800F-7552E2276294}"
+  DTS:DTSID="{7D159C26-25CD-468E-94E9-FD083006C1EB}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.1000.6"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="PaqueteB_RelacionalADW"
-  DTS:VersionGUID="{C993A090-9B75-46DE-8B7A-135206E0A2D5}">
+  DTS:VersionGUID="{1F8A5C2E-3311-4A7A-ABC9-03743DEDC3EC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[PersonasDW]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{C1104F9C-A6F2-4ED4-8F9A-DE8344C7CA25}"
+      DTS:DTSID="{79B3A16E-4583-4B1A-B627-863DBA636C16}"
       DTS:ObjectName="PersonasDW">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -30,7 +30,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[PersonasMER]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{5325CC24-3E8D-47D0-A7C9-46AD3C962C7C}"
+      DTS:DTSID="{78A13B86-13E4-4117-80CB-3ADB22DC81CA}"
       DTS:ObjectName="PersonasMER">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -46,7 +46,7 @@
       DTS:refId="Package\DFT Dim Educacion"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Niveles educativos"
-      DTS:DTSID="{1EA6AAD6-CE16-4F60-8AE6-E30EC73C534C}"
+      DTS:DTSID="{C546FF77-3B22-4528-8A26-78783893446E}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT Dim Educacion"
@@ -442,7 +442,7 @@
       DTS:refId="Package\DFT Dim Persona"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Una fila por persona"
-      DTS:DTSID="{118A5CD4-841D-48AC-A154-E8B7FE28758B}"
+      DTS:DTSID="{6A1D0962-BBD2-4423-9E75-E43191E668A6}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT Dim Persona"
@@ -1154,7 +1154,7 @@
       DTS:refId="Package\DFT Dim Situacion Laboral"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Situacion laboral, ocupacion y tipo de contrato"
-      DTS:DTSID="{29095159-2394-43D9-9408-8C0EB70552F8}"
+      DTS:DTSID="{29873F4E-2738-4D25-9C1B-8717A0798FEB}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT Dim Situacion Laboral"
@@ -1933,7 +1933,7 @@ LEFT JOIN dbo.Ocupaciones oc ON oc.IdOcupacion = o.IdOcupacion</property>
       DTS:refId="Package\DFT Dim Tiempo"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Una fila por fecha de encuesta"
-      DTS:DTSID="{4EC32A69-B69E-4D67-8AE2-15D30C95863A}"
+      DTS:DTSID="{8EB23AB8-4DDD-43BD-B4C7-10DB632489DE}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT Dim Tiempo"
@@ -2646,7 +2646,7 @@ LEFT JOIN dbo.Ocupaciones oc ON oc.IdOcupacion = o.IdOcupacion</property>
       DTS:refId="Package\DFT Dim Ubicacion"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Municipio, departamento y zona"
-      DTS:DTSID="{BAAB1E24-BCE4-446A-B3A3-A16EC0312A02}"
+      DTS:DTSID="{9899B5F3-C673-4502-BBA3-52AC05A204A8}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT Dim Ubicacion"
@@ -3511,7 +3511,7 @@ JOIN dbo.Departamentos d ON d.IdDepartamento = m.IdDepartamento</property>
       DTS:refId="Package\DFT Fact Observacion"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Hechos: una fila por persona y fecha de encuesta; claves sustitutas por Lookup"
-      DTS:DTSID="{8EE39A79-7641-4781-97A9-3BCD14978942}"
+      DTS:DTSID="{E82C5B81-0FD7-4D26-B01C-97664C0336CA}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DFT Fact Observacion"
@@ -5259,27 +5259,27 @@ LEFT JOIN dbo.Ocupaciones oc ON oc.IdOcupacion = o.IdOcupacion</property>
               name="Derived Column Output"
               startId="Package\DFT Fact Observacion\DER Claves de dimension.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DFT Fact Observacion.Paths[Lookup Match Output2]"
+              refId="Package\DFT Fact Observacion.Paths[Lookup Match Output]"
               endId="Package\DFT Fact Observacion\LKP SkEducacion.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DFT Fact Observacion\LKP SkUbicacion.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DFT Fact Observacion.Paths[Lookup Match Output3]"
+              refId="Package\DFT Fact Observacion.Paths[Lookup Match Output1]"
               endId="Package\DFT Fact Observacion\LKP SkSituacionLaboral.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DFT Fact Observacion\LKP SkEducacion.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DFT Fact Observacion.Paths[Lookup Match Output4]"
+              refId="Package\DFT Fact Observacion.Paths[Lookup Match Output2]"
               endId="Package\DFT Fact Observacion\LKP Hecho existente.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DFT Fact Observacion\LKP SkSituacionLaboral.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DFT Fact Observacion.Paths[Lookup Match Output1]"
+              refId="Package\DFT Fact Observacion.Paths[Lookup Match Output3]"
               endId="Package\DFT Fact Observacion\LKP SkUbicacion.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DFT Fact Observacion\LKP SkPersona.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DFT Fact Observacion.Paths[Lookup Match Output]"
+              refId="Package\DFT Fact Observacion.Paths[Lookup Match Output4]"
               endId="Package\DFT Fact Observacion\LKP SkPersona.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DFT Fact Observacion\LKP SkTiempo.Outputs[Lookup Match Output]" />
@@ -5302,42 +5302,42 @@ LEFT JOIN dbo.Ocupaciones oc ON oc.IdOcupacion = o.IdOcupacion</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[{1206FF98-7AF8-4CAF-B18D-C09685CB7FB7\}]"
       DTS:CreationName=""
-      DTS:DTSID="{1206FF98-7AF8-4CAF-B18D-C09685CB7FB7}"
+      DTS:DTSID="{4FB597BD-3C5D-4247-A631-3729B5AB8707}"
       DTS:From="Package\DFT Dim Educacion"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{1206FF98-7AF8-4CAF-B18D-C09685CB7FB7}"
+      DTS:ObjectName="{4FB597BD-3C5D-4247-A631-3729B5AB8707}"
       DTS:To="Package\DFT Fact Observacion" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[{3B2B90D7-6EA6-4935-84AB-71129900C46E\}]"
       DTS:CreationName=""
-      DTS:DTSID="{3B2B90D7-6EA6-4935-84AB-71129900C46E}"
+      DTS:DTSID="{FBBCFF12-844E-44C6-8A18-D575A9E207B4}"
       DTS:From="Package\DFT Dim Tiempo"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{3B2B90D7-6EA6-4935-84AB-71129900C46E}"
+      DTS:ObjectName="{FBBCFF12-844E-44C6-8A18-D575A9E207B4}"
       DTS:To="Package\DFT Fact Observacion" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[{43081B46-51CE-43F9-9E93-A062C197D207\}]"
       DTS:CreationName=""
-      DTS:DTSID="{43081B46-51CE-43F9-9E93-A062C197D207}"
+      DTS:DTSID="{FD6A929D-EDA4-4310-A907-17F812F1D5C5}"
       DTS:From="Package\DFT Dim Ubicacion"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{43081B46-51CE-43F9-9E93-A062C197D207}"
+      DTS:ObjectName="{FD6A929D-EDA4-4310-A907-17F812F1D5C5}"
       DTS:To="Package\DFT Fact Observacion" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[{86701735-E909-41ED-ACD1-3B5B003C40F0\}]"
       DTS:CreationName=""
-      DTS:DTSID="{86701735-E909-41ED-ACD1-3B5B003C40F0}"
+      DTS:DTSID="{E6C330BA-1445-49BD-9499-1466427A22C6}"
       DTS:From="Package\DFT Dim Situacion Laboral"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{86701735-E909-41ED-ACD1-3B5B003C40F0}"
+      DTS:ObjectName="{E6C330BA-1445-49BD-9499-1466427A22C6}"
       DTS:To="Package\DFT Fact Observacion" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[{8909978B-E82B-4B8F-A92F-756C21A1E43B\}]"
       DTS:CreationName=""
-      DTS:DTSID="{8909978B-E82B-4B8F-A92F-756C21A1E43B}"
+      DTS:DTSID="{92E7ACDE-7190-46D9-909E-E6EF42A13C1B}"
       DTS:From="Package\DFT Dim Persona"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{8909978B-E82B-4B8F-A92F-756C21A1E43B}"
+      DTS:ObjectName="{92E7ACDE-7190-46D9-909E-E6EF42A13C1B}"
       DTS:To="Package\DFT Fact Observacion" />
   </DTS:PrecedenceConstraints>
 </DTS:Executable>
