@@ -12,3 +12,6 @@ obj/
 .env.*
 *.pem
 *.key
+
+# Herramientas locales (no se suben)
+_herramientas/

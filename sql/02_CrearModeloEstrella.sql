@@ -27,41 +27,41 @@ CREATE TABLE dbo.DimTiempo (
     Fecha           DATE         NOT NULL CONSTRAINT UQ_DimTiempo_Fecha UNIQUE,
     Anio            SMALLINT     NOT NULL,
     Mes             TINYINT      NOT NULL,
-    NombreMes       VARCHAR(15)  NOT NULL,
+    NombreMes       NVARCHAR(15)  NOT NULL,
     Trimestre       TINYINT      NOT NULL,
     Dia             TINYINT      NOT NULL
 );
 
 CREATE TABLE dbo.DimPersona (
     SkPersona       INT IDENTITY(1,1) CONSTRAINT PK_DimPersona PRIMARY KEY,
-    TipoDocumento   VARCHAR(5)    NOT NULL,
-    NumeroDocumento VARCHAR(20)   NOT NULL,
+    TipoDocumento   NVARCHAR(5)    NOT NULL,
+    NumeroDocumento NVARCHAR(20)   NOT NULL,
     NombreCompleto  NVARCHAR(210) NOT NULL,
-    Sexo            VARCHAR(2)    NULL,
-    EstadoCivil     VARCHAR(20)   NULL,
+    Sexo            NVARCHAR(2)    NULL,
+    EstadoCivil     NVARCHAR(20)   NULL,
     CONSTRAINT UQ_DimPersona_Documento UNIQUE (TipoDocumento, NumeroDocumento)
 );
 
 CREATE TABLE dbo.DimUbicacion (
     SkUbicacion        INT IDENTITY(1,1) CONSTRAINT PK_DimUbicacion PRIMARY KEY,
-    CodigoMunicipio    VARCHAR(10)   NOT NULL,
+    CodigoMunicipio    NVARCHAR(10)   NOT NULL,
     Municipio          NVARCHAR(60)  NOT NULL,
-    CodigoDepartamento VARCHAR(10)   NOT NULL,
+    CodigoDepartamento NVARCHAR(10)   NOT NULL,
     Departamento       NVARCHAR(60)  NOT NULL,
-    Zona               VARCHAR(10)   NOT NULL,   -- 'SIN DATO' cuando no se conoce
+    Zona               NVARCHAR(10)   NOT NULL,   -- 'SIN DATO' cuando no se conoce
     CONSTRAINT UQ_DimUbicacion UNIQUE (CodigoMunicipio, Zona)
 );
 
 CREATE TABLE dbo.DimEducacion (
     SkEducacion     INT IDENTITY(1,1) CONSTRAINT PK_DimEducacion PRIMARY KEY,
-    NivelEducativo  VARCHAR(30)  NOT NULL CONSTRAINT UQ_DimEducacion UNIQUE
+    NivelEducativo  NVARCHAR(30)  NOT NULL CONSTRAINT UQ_DimEducacion UNIQUE
 );
 
 CREATE TABLE dbo.DimSituacionLaboral (
     SkSituacionLaboral INT IDENTITY(1,1) CONSTRAINT PK_DimSituacionLaboral PRIMARY KEY,
-    SituacionLaboral   VARCHAR(30)  NOT NULL,
+    SituacionLaboral   NVARCHAR(30)  NOT NULL,
     Ocupacion          NVARCHAR(60) NOT NULL,   -- 'NO APLICA' cuando no tiene
-    TipoContrato       VARCHAR(20)  NOT NULL,
+    TipoContrato       NVARCHAR(20)  NOT NULL,
     CONSTRAINT UQ_DimSituacionLaboral UNIQUE (SituacionLaboral, Ocupacion, TipoContrato)
 );
 
